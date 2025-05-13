@@ -7,6 +7,7 @@ export function App() {
       <Bio />
       <Bio />
       <Bio />
+      <Bio />
     </>
   );
 }
