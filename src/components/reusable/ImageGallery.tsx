@@ -64,23 +64,12 @@ export default function ImageGallery(props: ImageGalleryProps) {
       </div>
 
       {selectedImage && (
-<<<<<<< HEAD
         <ModalPortal>
           <div
             class={`fixed inset-0 z-[1000] flex items-center justify-center bg-gray-900/70 backdrop-blur-sm transition-opacity duration-200 ${
               isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
             onClick={closeModal}
-=======
-        <div
-          class="absolute inset-0 bg-black/50 backdrop-blur-xl z-50 flex items-center justify-center"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            onClick={() => setSelectedImage(null)}
-            class="absolute top-4 right-4 text-white hover:text-red-500 transition-colors"
-            aria-label="Zamknij"
->>>>>>> 9df389c (Landing page structure)
           >
             <button
               onClick={closeModal}
@@ -90,7 +79,6 @@ export default function ImageGallery(props: ImageGalleryProps) {
               <X size={32} class="hover:cursor-pointer" />
             </button>
 
-<<<<<<< HEAD
             <img
               src={selectedImage}
               alt="Powiększony obraz"
@@ -101,14 +89,6 @@ export default function ImageGallery(props: ImageGalleryProps) {
             />
           </div>
         </ModalPortal>
-=======
-          <img
-            src={selectedImage}
-            alt="Powiększony obraz"
-            class="max-w-full h-auto rounded-lg shadow-2xl object-contain"
-          />
-        </div>
->>>>>>> 9df389c (Landing page structure)
       )}
     </section>
   );
