@@ -9,7 +9,7 @@ import PayListSection from "./components/PayList";
 import { useEffect } from "preact/hooks";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Footer from "./components/Footer";
+import Footer from "@/components/Footer";
 
 export function App() {
   useEffect(() => {
