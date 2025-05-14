@@ -1,10 +1,7 @@
 import { useState, useEffect } from "preact/hooks";
 import { X } from "lucide-preact";
 import SectionHeader from "./SectionHeader";
-<<<<<<< HEAD
 import ModalPortal from "../ModalPortal";
-=======
->>>>>>> a419378 (Overall structure of page)
 
 interface ImageGalleryProps {
   images: string[];
@@ -12,24 +9,16 @@ interface ImageGalleryProps {
   id?: string;
 }
 
-<<<<<<< HEAD
 export default function ImageGallery(props: ImageGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-=======
-export default function ImageGallery({ images, title, id }: ImageGalleryProps) {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
->>>>>>> a419378 (Overall structure of page)
 
   useEffect(() => {
     if (selectedImage) {
       document.body.classList.add("overflow-hidden");
-<<<<<<< HEAD
       requestAnimationFrame(() => {
         setIsVisible(true);
       });
-=======
->>>>>>> a419378 (Overall structure of page)
     } else {
       document.body.classList.remove("overflow-hidden");
     }
@@ -39,7 +28,6 @@ export default function ImageGallery({ images, title, id }: ImageGalleryProps) {
     };
   }, [selectedImage]);
 
-<<<<<<< HEAD
   const closeModal = () => {
     setIsVisible(false);
     setTimeout(() => {
@@ -51,12 +39,6 @@ export default function ImageGallery({ images, title, id }: ImageGalleryProps) {
     if (props.images.length === 1) {
       return "flex justify-center";
     } else if (props.images.length === 2) {
-=======
-  const getGridClass = () => {
-    if (images.length === 1) {
-      return "flex justify-center";
-    } else if (images.length === 2) {
->>>>>>> a419378 (Overall structure of page)
       return "flex justify-center gap-6 flex-wrap";
     } else {
       return "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2";
@@ -64,7 +46,6 @@ export default function ImageGallery({ images, title, id }: ImageGalleryProps) {
   };
 
   return (
-<<<<<<< HEAD
     <section id={props.id} data-aos="fade-right">
       <div class="max-w-6xl mx-auto">
         <SectionHeader title={props.title} />
@@ -108,43 +89,6 @@ export default function ImageGallery({ images, title, id }: ImageGalleryProps) {
             />
           </div>
         </ModalPortal>
-=======
-    <section id={id} data-aos="fade-right" class="py-12 px-4">
-      <SectionHeader title={title} />
-      <ul class={getGridClass()}>
-        {images.map((img, index) => (
-          <li key={index} class={images.length <= 2 ? "max-w-sm" : ""}>
-            <img
-              src={img}
-              alt={`Obraz ${index + 1}`}
-              class="max-w-lg h-auto rounded-lg cursor-pointer transition duration-300 transform hover:scale-101 hover:shadow-xl"
-              onClick={() => setSelectedImage(img)}
-            />
-          </li>
-        ))}
-      </ul>
-
-      {selectedImage && (
-        <div
-          class="fixed inset-0 bg-black/50 backdrop-blur-xl z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            onClick={() => setSelectedImage(null)}
-            class="absolute top-4 right-4 text-white hover:text-red-500 transition-colors"
-            aria-label="Zamknij"
-          >
-            <X size={32} class="hover:cursor-pointer" />
-          </button>
-
-          <img
-            src={selectedImage}
-            alt="Powiększony obraz"
-            class="max-w-full h-auto rounded-lg shadow-2xl object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
->>>>>>> a419378 (Overall structure of page)
       )}
     </section>
   );
