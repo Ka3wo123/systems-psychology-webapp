@@ -10,13 +10,15 @@
   },
   "dependencies": {
     "@preact/signals": "^2.0.4",
+    "@tailwindcss/vite": "^4.1.6",
     "aos": "^2.3.4",
+    "lucide-preact": "^0.510.0",
     "preact": "^10.26.5"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.1",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
+    "@types/aos": "^3.0.7",
+    "@types/node": "^22.15.18",
     "tailwindcss": "^4.1.6",
     "typescript": "~5.8.3",
     "vite": "^6.3.5"
