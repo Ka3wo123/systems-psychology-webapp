@@ -51,7 +51,7 @@ export default function ImageGallery({ images, title, id }: ImageGalleryProps) {
 
       {selectedImage && (
         <div
-          class="fixed inset-0 bg-black/50 backdrop-blur-xl z-50 flex items-center justify-center p-4"
+          class="absolute inset-0 bg-black/50 backdrop-blur-xl z-50 flex items-center justify-center"
           onClick={() => setSelectedImage(null)}
         >
           <button
@@ -66,7 +66,6 @@ export default function ImageGallery({ images, title, id }: ImageGalleryProps) {
             src={selectedImage}
             alt="Powiększony obraz"
             class="max-w-full h-auto rounded-lg shadow-2xl object-contain"
-            onClick={(e) => e.stopPropagation()}
           />
         </div>
       )}
