@@ -2,4 +2,4 @@ export const DESCRIPTION = `Lorem ipsum dolor sit amet, consectetur adipiscing e
   tempor incididunt ut labore et dolore magna aliqua..`;
 
 export const SYSTEM_PSYCHOLOGY = "Psychologia systemowa";
-export const OWNER_NAME = "dr Beata Zych";
+export const WORKER_NAME = "dr Beata Zych";

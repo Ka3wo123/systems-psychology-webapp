@@ -7,6 +7,7 @@ body {
 
 .circle {
   position: absolute;
+  overflow-x: hidden;
   border-radius: 50%;
   filter: blur(40px);
   opacity: 0.5;
@@ -18,21 +19,12 @@ body {
   width: 30rem;
   height: 25rem;
   top: -10rem;
-  left: -6rem;
+  left: 0rem;
 }
-
 .circle2 {
   background-color: rgba(254, 144, 144);
-  width: 30rem;
-  height: 30rem;
-  top: 3rem;
-  right: -20rem;
-}
-
-.circle3 {
-  background-color: rgba(34, 193, 195, 0.6); /* Kolor turkusowy */
-  width: 100px;
-  height: 100px;
-  top: 80%;
-  left: 40%;
+  width: 50rem;
+  height: 20rem;
+  top: -10rem;
+  right: 0rem;
 }
