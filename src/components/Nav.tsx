@@ -6,11 +6,11 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
-    <nav class="w-fit px-4 md:px-8 py-4 text-white z-50 relative">
+    <nav class="fixed top-4 right-10 md:static text-white z-50 ">
       <div id="desktop-menu" class="flex items-center justify-between">
         <button
           onClick={toggleMenu}
-          class="md:hidden focus:outline-none"
+          class="md:hidden focus:outline-none hover:cursor-pointer"
           aria-label="Toggle Menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -29,22 +29,23 @@ export default function Nav() {
 
       <div
         id="mobile-menu"
-        class={`absolute right-0 top-full w-fit overflow-hidden transform transition-all duration-500 ease-in-out md:hidden ${
+        class={`absolute top-auto right-0 w-[80vw] rounded-xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out border-1 md:hidden bg-zinc-200 ${
           isOpen
-            ? "max-h-96 w-2xl opacity-100 translate-y-0"
-            : "max-h-0 opacity-0 -translate-y-2"
+            ? "opacity-100 scale-100"
+            : "opacity-0 scale-95 pointer-events-none"
         }`}
       >
-        <ul class="flex flex-col gap-3 text-lg font-medium bg-gray-200 p-4 ">
-          {LINKS.map((item) => (
-            <li key={item.href}>
+        <ul class="flex flex-col p-4 text-base font-medium">
+          {LINKS.map((l) => (
+            <li key={l.href}>
               <a
-                href={item.href}
-                class="block px-2 py-1 hover:bg-blue-500 rounded"
+                href={l.href}
+                class="block p-4 rounded-lg hover:bg-white/30 transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                {item.label}
+                {l.label}
               </a>
+              <hr />
             </li>
           ))}
         </ul>
