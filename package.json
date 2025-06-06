@@ -21,6 +21,7 @@
     "@types/node": "^22.15.18",
     "tailwindcss": "^4.1.6",
     "typescript": "~5.8.3",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-plugin-svgr": "^4.3.0"
   }
 }

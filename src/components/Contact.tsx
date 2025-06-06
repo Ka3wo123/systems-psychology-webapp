@@ -44,7 +44,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <div className="w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
+          <div className="w-full h-[20rem] rounded-xl overflow-hidden shadow-xl">
             <iframe
               title="Mapa lokalizacji"
               src="https://www.google.com/maps/embed/v1/place?q=ujejskiego&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
