@@ -7,7 +7,7 @@ export default function Nav() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav class="w-fit px-4 md:px-8 lg:px-12 absolute top-4 right-0 z-50">
+    <nav class="w-fit px-4 md:px-8 lg:px-12 absolute top-10 right-0 z-50">
       <div class="w-full mx-auto flex justify-end">
         <ul class="hidden md:flex gap-6 text-lg font-medium text-white items-center">
           {LINKS.map((item) => (

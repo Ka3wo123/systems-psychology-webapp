@@ -12,7 +12,6 @@ import "aos/dist/aos.css";
 import Footer from "@/components/Footer";
 import ScrollUpButton from "./components/reusable/ScrollUpButton";
 
-
 export function App() {
   useEffect(() => {
     AOS.init({
