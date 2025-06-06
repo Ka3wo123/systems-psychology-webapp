@@ -7,7 +7,11 @@ interface ServiceCardProps {
 
 export default function ServiceCard(props: ServiceCardProps) {
   return (
+<<<<<<< HEAD
     <div className="max-w-[90vw] sm:max-w-md rounded-2xl shadow-xl p-6 bg-gradient-to-br from-rose-200 to-blue-200 break-words overflow-hidden">
+=======
+    <div className=" max-w-[90vw] sm:max-w-md rounded-2xl shadow-md p-6 bg-gradient-to-br from-rose-200 to-blue-200 break-words overflow-hidden">
+>>>>>>> 24654be (Add image modal)
       <h3 className="text-center text-xl font-semibold text-gray-800 mb-4 break-words">
         {props.name}
       </h3>
