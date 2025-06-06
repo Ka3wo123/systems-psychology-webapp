@@ -1,6 +1,7 @@
 import { WORKER_NAME, SYSTEM_PSYCHOLOGY } from "@/constants/bio";
 import logo from "@/assets/logoipsum-379.svg";
 
+
 export default function Banner() {
   return (
     <div>

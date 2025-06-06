@@ -23,7 +23,6 @@ export function App() {
   return (
     <>
       <div className="circle circle1"></div>
-
       <div className="text-gray-900 min-h-screen px-6 md:px-12">
         <div className="flex items-start justify-between py-4 mb-56">
           <Banner />
