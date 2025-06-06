@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 import Footer from "@/components/Footer";
 import ScrollUpButton from "./components/reusable/ScrollUpButton";
 
+
 export function App() {
   useEffect(() => {
     AOS.init({
@@ -23,7 +24,6 @@ export function App() {
   return (
     <>
       <div className="circle circle1"></div>
-
       <div className="text-gray-900 min-h-screen px-6 md:px-12">
         <div className="flex items-start justify-between py-4 mb-56">
           <Banner />

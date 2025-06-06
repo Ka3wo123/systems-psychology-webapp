@@ -1,7 +1,6 @@
 /*
 Google map sources: https://www.embed-map.com/
 */
-
 import { Mail, MapPin, Phone } from "lucide-preact";
 import SectionHeader from "@/components/reusable/SectionHeader";
 import { CONTACT_HEADER } from "@/constants/contact";
@@ -43,7 +42,6 @@ export default function ContactSection() {
               <p>{location}</p>
             </div>
           </div>
-
           <div className="w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
             <iframe
               title="Mapa lokalizacji"

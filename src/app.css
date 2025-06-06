@@ -3,7 +3,6 @@ body {
   position: relative;
   overflow-x: hidden;
   font-family: "Poppins";
-  scroll-behavior: smooth;
 }
 
 .circle {
