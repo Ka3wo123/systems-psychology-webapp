@@ -3,7 +3,7 @@ interface ServiceCardProps {
   price: string;
   description: string;
   additionalText?: string;
-
+}
 
 export default function ServiceCard(props: ServiceCardProps) {
   return (
