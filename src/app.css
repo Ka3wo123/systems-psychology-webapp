@@ -16,15 +16,17 @@ body {
 
 .circle1 {
   background-color: rgb(139, 226, 218);
-  width: 30rem;
-  height: 25rem;
-  top: -10rem;
-  left: 0rem;
+  width: 40vw;
+  height: 20vw;
+  top: -10vw;
+  left: -10vw;
 }
-.circle2 {
-  background-color: rgba(254, 144, 144);
-  width: 50rem;
-  height: 20rem;
-  top: -10rem;
-  right: 0rem;
+
+@media (max-width: 768px) {
+  .circle1 {
+    width: 70vw;
+    height: 50vw;
+    top: -20vw;
+    left: -20vw;
+  }
 }

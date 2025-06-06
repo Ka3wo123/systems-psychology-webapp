@@ -10,6 +10,8 @@ import { useEffect } from "preact/hooks";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "@/components/Footer";
+import ScrollUpButton from "./components/reusable/ScrollUpButton";
+
 
 export function App() {
   useEffect(() => {
@@ -22,10 +24,8 @@ export function App() {
   return (
     <>
       <div className="circle circle1"></div>
-      <div className="circle circle2"></div>
-
       <div className="text-gray-900 min-h-screen px-6 md:px-12">
-        <div className="flex items-start justify-between py-4 mb-100">
+        <div className="flex items-start justify-between py-4 mb-56">
           <Banner />
           <Nav />
         </div>
@@ -36,6 +36,7 @@ export function App() {
           <CertificatesSection />
           <PayListSection />
           <Contact />
+          <ScrollUpButton />
         </div>
       </div>
       <Footer />

@@ -1,3 +1,6 @@
+/*
+Google map sources: https://www.embed-map.com/
+*/
 import { Mail, MapPin, Phone } from "lucide-preact";
 import SectionHeader from "@/components/reusable/SectionHeader";
 import { CONTACT_HEADER } from "@/constants/contact";
@@ -14,36 +17,36 @@ export default function ContactSection() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-6 text-gray-700">
-            <div>
-              <div class="flex items-center gap-2">
-                <Phone />
-                <a href={`tel:${phoneNumber}`} className="text-blue-600">
-                  {phoneNumber}
-                </a>
-              </div>
+            <div className="flex items-center gap-2">
+              <Phone className="text-green-500" />
+              <a
+                href={`tel:${phoneNumber}`}
+                className="text-blue-600 hover:underline"
+              >
+                {phoneNumber}
+              </a>
             </div>
 
-            <div class="flex items-center gap-2">
-              <Mail />
-              <div>
-                <a href={`mailto:${email}`} className="text-blue-600 ">
-                  {email}
-                </a>
-              </div>
+            <div className="flex items-center gap-2">
+              <Mail className="text-black" />
+              <a
+                href={`mailto:${email}`}
+                className="text-blue-600 hover:underline"
+              >
+                {email}
+              </a>
             </div>
 
-            <div class="flex items-center gap-2">
-              <MapPin />
+            <div className="flex items-center gap-2">
+              <MapPin className="text-red-600" />
               <p>{location}</p>
             </div>
           </div>
-
-          <div className="w-full h-full md:h-[100%] rounded-xl overflow-hidden shadow-lg">
+          <div className="w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
             <iframe
               title="Mapa lokalizacji"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.1791453653855!2d21.01222841616206!3d52.22967597975769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc6696d4e0b5%3A0x45e52b142001ecf4!2sWarszawa!5e0!3m2!1spl!2spl!4v1617982310765!5m2!1spl!2spl"
-              width="100%"
-              height="100%"
+              src="https://www.google.com/maps/embed/v1/place?q=ujejskiego&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+              className="w-full h-full border-0"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

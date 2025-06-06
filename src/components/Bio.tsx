@@ -9,6 +9,7 @@ export default function BioSection() {
         src={heroImg}
         alt={"Beata Zych"}
       ></img>
+      <p class="text-4xl mb-3.5">Beata Zych</p>
       <p class="max-w-3xl mx-auto text-lg">{DESCRIPTION}</p>
     </section>
   );
