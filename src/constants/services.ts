@@ -34,7 +34,7 @@ export const SERVICES = [
     name: "Terapia indywidualna",
     price: "180 zł",
     description:
-      "Regularne sesje terapeutyczne dostosowane do potrzeb dziecka.",
+      "Regularne sesje terapeutyczne dostosowane do potrzeb dziecka 2.",
   },
 ];
 
