@@ -20,24 +20,32 @@ export function App() {
       offset: 100,
     });
   }, []);
+
   return (
     <>
-      <div className="circle circle1"></div>
-      <div className="text-gray-900 min-h-screen px-6 md:px-12">
-        <div className="flex items-start justify-between py-4 mb-56">
+      <header className="w-full bg-[#be9a9a] px-5 md:px-12 py-4 shadow-xl z-40 relative rounded-b-xl">
+        <div className="flex items-center justify-between">
           <Banner />
           <Nav />
         </div>
+      </header>
 
+      <main className="text-gray-900 min-h-screen px-6 md:px-12 mt-24">
         <div className="flex flex-col space-y-16">
           <BioSection />
+
           <EducationSection />
+
           <CertificatesSection />
+
           <PayListSection />
+
           <Contact />
+
           <ScrollUpButton />
         </div>
-      </div>
+      </main>
+
       <Footer />
     </>
   );

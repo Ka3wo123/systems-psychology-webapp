@@ -5,10 +5,13 @@ interface SectionHeaderProps {
 
 export default function SectionHeader(props: SectionHeaderProps) {
   return (
-    <div className={`text-center mb-10 ${props.className}`}>
-      <h2 className="text-3xl md:text-4xl italic font-playfair text-gray-800 relative inline-block">
+    <div className={`text-center mb-10 relative ${props.className}`}>
+      <div className="absolute  top-0 left-1/2 -translate-x-[100%] w-50 h-4 bg-[#c543e6]  -z-10 rounded-2xl blur-2xl" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-50 h-4 bg-[#6e1515]  -z-10 rounded-2xl blur-2xl" />
+      <div className="absolute top-0 left-1/2  w-50 h-4 bg-[#1e6ce0]  -z-10 rounded-2xl blur-2xl" />
+
+      <h2 className="text-3xl md:text-4xl italic font-playfair text-gray-800 relative z-10 inline-block">
         {props.title}
-        <span className="block h-[2px] w-16 bg-gradient-to-r from-blue-400 to-pink-400 mx-auto mt-2" />
       </h2>
     </div>
   );

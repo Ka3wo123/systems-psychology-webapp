@@ -7,27 +7,25 @@ export default function Nav() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav class="w-fit px-4 md:px-8 lg:px-12 absolute top-10 right-0 z-50">
-      <div class="w-full mx-auto flex justify-end">
-        <ul class="hidden md:flex gap-6 text-lg font-medium text-white items-center">
-          {LINKS.map((item) => (
-            <li key={item.href} class="relative group cursor-pointer">
-              <a href={item.href} class="transition-colors duration-300">
-                {item.label}
-              </a>
-              <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full"></span>
-            </li>
-          ))}
-        </ul>
+    <nav class="w-fit px-4 md:px-8 lg:px-12 flex top-1/2 right-0 z-50">
+      <ul class="hidden md:flex gap-6 text-lg font-medium text-white items-center">
+        {LINKS.map((item) => (
+          <li key={item.href} class="relative group cursor-pointer">
+            <a href={item.href} class="transition-colors duration-300">
+              {item.label}
+            </a>
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full"></span>
+          </li>
+        ))}
+      </ul>
 
-        <button
-          onClick={toggleMenu}
-          class="md:hidden absolute top-2 right-2 p-2 focus:outline-none hover:cursor-pointer text-white"
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+      <button
+        onClick={toggleMenu}
+        class="md:hidden absolute top-5 right-2 me-2 focus:outline-none hover:cursor-pointer text-white"
+        aria-label="Toggle Menu"
+      >
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
 
       <div
         class={`absolute top-10 right-2 w-[90vw] rounded-xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out border bg-gray-200 border-white md:hidden ${

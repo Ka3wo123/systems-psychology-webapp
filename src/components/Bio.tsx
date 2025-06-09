@@ -1,4 +1,4 @@
-import { DESCRIPTION } from "@/constants/bio";
+import { DESCRIPTION, WORKER_NAME } from "@/constants/bio";
 import heroImg from "@/assets/placeholderHero.jpg";
 
 export default function BioSection() {
@@ -10,7 +10,7 @@ export default function BioSection() {
           src={heroImg}
           alt={"Beata Zych"}
         />
-        <p class="text-4xl mb-3.5">Beata Zych</p>
+        <p class="text-4xl mb-3.5 font-semibold">{WORKER_NAME}</p>
         <p class="max-w-7xl mx-auto text-lg">{DESCRIPTION}</p>
       </div>
     </section>
