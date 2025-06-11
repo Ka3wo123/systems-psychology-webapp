@@ -7,7 +7,7 @@ export default function PayListSection() {
   return (
     <section id="pricing" data-aos="fade-right" className="py-12 px-4">
       <SectionHeader title={SERVICE_HEADER} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-6xl mx-auto justify-items-center">
         {SERVICES.map((s, index) => {
           const card = (
             <ServiceCard
@@ -18,8 +18,8 @@ export default function PayListSection() {
             />
           );
 
-          return s.additionalText ? (
-            <Tooltip key={index} text={s.additionalText}>
+          return s.tooltip ? (
+            <Tooltip key={index} text={s.tooltip}>
               {card}
             </Tooltip>
           ) : (

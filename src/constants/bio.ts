@@ -1,7 +1,20 @@
+export const HEADER_DESC = "Terapia systemowa – zaproszenie do wspólnej drogi";
 export const DESCRIPTION = `
-  What is Lorem Ipsum?
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  `;
+Jeśli doświadczasz trudności w relacjach – z partnerem, dzieckiem, rodzicami, czy innymi bliskimi osobami – terapia systemowa może być dla Ciebie wartościowym wsparciem.
+
+Pracuję w podejściu systemowym, które patrzy na człowieka nie tylko jako jednostkę, ale jako część większej całości – rodziny, związku, grupy społecznej.
+
+Jestem magistrem terapii systemowej, ukończyłam studia podyplomowe z tego kierunku. W mojej pracy to podejście pomaga mi spojrzeć szerzej – z empatią i zrozumieniem dla powiązań, które wpływają na Twoje codzienne życie i samopoczucie.
+
+Zapraszam Cię na spotkanie, jeśli:
+
+– czujesz się zagubiony/a w relacjach,  
+– chcesz lepiej zrozumieć siebie i swoich bliskich,  
+– doświadczasz napięć rodzinnych lub konfliktów,  
+– jesteś w kryzysie – indywidualnie lub jako para, rodzina.
+
+W bezpiecznej atmosferze, z uważnością na Twoją historię, wspólnie poszukamy rozwiązań, które będą dla Ciebie wspierające. Terapia systemowa może być pierwszym krokiem do zmiany, zrozumienia i ulgi.
+`;
 
 export const SYSTEM_PSYCHOLOGY = "Psychologia systemowa";
-export const WORKER_NAME = "dr Beata Zych";
+export const WORKER_NAME = "mgr Beata Zych";

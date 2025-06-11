@@ -8,7 +8,7 @@ export default function Nav() {
 
   return (
     <nav class="w-fit px-4 md:px-8 lg:px-12 flex top-1/2 right-0 z-50">
-      <ul class="hidden md:flex gap-6 text-lg font-medium text-white items-center">
+      <ul class="hidden md:flex gap-6 text-xl font-medium text-white items-center">
         {LINKS.map((item) => (
           <li key={item.href} class="relative group cursor-pointer">
             <a href={item.href} class="transition-colors duration-300">
@@ -21,14 +21,14 @@ export default function Nav() {
 
       <button
         onClick={toggleMenu}
-        class="md:hidden absolute top-5 right-2 me-2 focus:outline-none hover:cursor-pointer text-white"
+        class="md:hidden relative right-2 me-2 focus:outline-none hover:cursor-pointer text-white"
         aria-label="Toggle Menu"
       >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
+        {isOpen ? <X size={32} /> : <Menu size={32} />}
       </button>
 
       <div
-        class={`absolute top-10 right-2 w-[90vw] rounded-xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out border bg-gray-200 border-white md:hidden ${
+        class={`absolute mt-10 left-1/2 -translate-x-1/2 w-[90vw] rounded-xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out border bg-gray-200 border-white md:hidden ${
           isOpen
             ? "opacity-100 scale-100"
             : "opacity-0 scale-95 pointer-events-none"

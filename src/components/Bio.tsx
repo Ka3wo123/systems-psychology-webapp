@@ -1,7 +1,11 @@
-import { DESCRIPTION, WORKER_NAME } from "@/constants/bio";
+import { DESCRIPTION, HEADER_DESC } from "@/constants/bio";
 import heroImg from "@/assets/placeholderHero.jpg";
 
 export default function BioSection() {
+  function fixOrphans(text: string): string {
+    return text.replace(/ ([aiouwzAIUOWZ]) /g, " $1\u00A0");
+  }
+
   return (
     <section id="about" data-aos="fade-right" class="py-8 px-4 text-center">
       <div class="bg-gradient-to-br from-[#DED3D3] via-[#f1cfcf] to-[#DED3D3] p-10 rounded-tr-4xl rounded-bl-4xl">
@@ -10,8 +14,18 @@ export default function BioSection() {
           src={heroImg}
           alt={"Beata Zych"}
         />
-        <p class="text-4xl mb-3.5 font-semibold">{WORKER_NAME}</p>
-        <p class="max-w-7xl mx-auto text-lg">{DESCRIPTION}</p>
+        <p class="text-lg lg:text-2xl mb-3.5 font-semibold">{HEADER_DESC}</p>
+
+        {DESCRIPTION.trim()
+          .split("\n\n")
+          .map((paragraph, idx) => (
+            <p
+              key={idx}
+              className="text-sm mb-4 text-gray-700 sm:text-lg md:text-xl whitespace-pre-line text-left"
+            >
+              {fixOrphans(paragraph.trim())}
+            </p>
+          ))}
       </div>
     </section>
   );
