@@ -21,7 +21,7 @@ export default function BioSection() {
           .map((paragraph, idx) => (
             <p
               key={idx}
-              className="text-sm mb-4 text-gray-700 sm:text-lg md:text-xl whitespace-pre-line text-left"
+              class="text-sm mb-4 text-gray-700 sm:text-lg md:text-xl whitespace-pre-line text-left"
             >
               {fixOrphans(paragraph.trim())}
             </p>
