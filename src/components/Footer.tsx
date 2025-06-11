@@ -8,7 +8,7 @@ export default function Footer({
   return (
     <footer class="w-full bg-black flex justify-center">
       <div class="flex justify-center gap-2 text-sm text-white">
-        <p>© 2025 Twoja Nazwa</p>
+        <p>© 2025 www.beatazych.pl</p>
         <button
           onClick={onPrivacyClick}
           class="flex gap-1 items-center hover:text-gray-200 hover:cursor-pointer"
