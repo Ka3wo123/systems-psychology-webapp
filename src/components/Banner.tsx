@@ -7,8 +7,10 @@ export default function Banner() {
       <img src={logo} alt="Logo" class="w-24 h-24" />
 
       <div class="flex flex-col items-start self-center">
-        <p class="text-xl text-white font-light">{SYSTEM_PSYCHOLOGY}</p>
-        <p class="text-2xl text-white font-bold">{WORKER_NAME}</p>
+        <p class="text-sm lg:text-xl text-white font-light">
+          {SYSTEM_PSYCHOLOGY}
+        </p>
+        <p class="text-xl lg:text-2xl text-white font-bold">{WORKER_NAME}</p>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export default function Nav() {
 
       <button
         onClick={toggleMenu}
-        class="md:hidden relative right-2 me-2 focus:outline-none hover:cursor-pointer text-white"
+        class="md:hidden relative focus:outline-none hover:cursor-pointer text-white"
         aria-label="Toggle Menu"
       >
         {isOpen ? <X size={32} /> : <Menu size={32} />}

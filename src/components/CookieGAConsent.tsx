@@ -1,8 +1,10 @@
 import {
+  COOKIES_INFO,
   ANALYTICS_COOKIES_DESCRIPRION,
   COOKIES_CONSENT_ACCEPTANCE,
-  COOKIES_INFO,
   REJECT_CONSENT,
+  COOKIES_CONSENT_REJECTION,
+  ACCEPT_CONSENT,
 } from "@/constants/cookies";
 import { X } from "lucide-preact";
 import { useEffect, useState } from "preact/hooks";
@@ -13,6 +15,7 @@ export default function CookieConsent() {
     localStorage.getItem("ga_consent")
   );
   const [showModal, setShowModal] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     if (consent === "granted") {
@@ -28,12 +31,23 @@ export default function CookieConsent() {
   const giveConsent = () => {
     localStorage.setItem("ga_consent", "granted");
     setConsent("granted");
+    closeModal();
   };
 
   const revokeConsent = () => {
     localStorage.removeItem("ga_consent");
     setConsent(null);
-    setShowModal(false);
+    closeModal();
+  };
+
+  const openModal = () => {
+    setShowModal(true);
+    setTimeout(() => setIsAnimating(true), 10);
+  };
+
+  const closeModal = () => {
+    setTimeout(() => setShowModal(false), 300);
+    setIsAnimating(false);
   };
 
   if (!consent) {
@@ -63,8 +77,8 @@ export default function CookieConsent() {
   return (
     <>
       <button
-        onClick={() => setShowModal(true)}
-        class="fixed bottom-6 left-6 bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 hover:cursor-pointer z-50 flex items-center gap-2 group transition-all duration-300"
+        onClick={openModal}
+        class="fixed bottom-6 left-6 bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 hover:cursor-pointer z-50 flex items-center gap-2 group transition-all duration-500"
       >
         <span class="text-xl">🍪</span>
         <span class="overflow-hidden whitespace-nowrap max-w-0 group-hover:max-w-[200px] transition-all duration-300 text-sm">
@@ -73,24 +87,57 @@ export default function CookieConsent() {
       </button>
 
       {showModal && (
-        <div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div class="bg-white rounded-lg p-6 w-[90%] max-w-md shadow-lg text-center space-y-4">
+        <div class="fixed inset-0 flex items-center justify-center z-50 m-5">
+          <div
+            class={`transform transition-all duration-500 ${
+              isAnimating ? "scale-100 opacity-100" : "scale-0 opacity-0"
+            } bg-white rounded-lg p-6 w-full max-w-md shadow-lg text-center space-y-4`}
+          >
             <div class="flex flex-row justify-between">
-              <h2 class="text-xl font-bold">Zgoda na cookies</h2>
+              <h2 class="text-2xl font-bold">Zgoda na analityczne cookies</h2>
               <X
-                onClick={() => setShowModal(false)}
+                onClick={closeModal}
                 size={25}
                 class="hover:text-red-600 hover:cursor-pointer"
-              ></X>
+              />
             </div>
-            <p class="text-left">{ANALYTICS_COOKIES_DESCRIPRION}</p>
-            <p class="text-left">{COOKIES_CONSENT_ACCEPTANCE}</p>
-            <button
-              onClick={revokeConsent}
-              class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 hover:cursor-pointer"
-            >
-              {REJECT_CONSENT}
-            </button>
+
+            <p class="text-base lg:text-xl text-left">
+              {ANALYTICS_COOKIES_DESCRIPRION}
+            </p>
+
+            {consent === "granted" ? (
+              <>
+                {COOKIES_CONSENT_ACCEPTANCE.trim()
+                  .split("\n\n")
+                  .map((paragraph, idx) => (
+                    <p
+                      key={idx}
+                      class="text-base mb-4 lg:text-xl whitespace-pre-line text-left"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                <button
+                  onClick={revokeConsent}
+                  class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 hover:cursor-pointer"
+                >
+                  {REJECT_CONSENT}
+                </button>
+              </>
+            ) : (
+              <>
+                <p class="text-base lg:text-xl text-left">
+                  {COOKIES_CONSENT_REJECTION}
+                </p>
+                <button
+                  onClick={giveConsent}
+                  class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 hover:cursor-pointer"
+                >
+                  {ACCEPT_CONSENT}
+                </button>
+              </>
+            )}
           </div>
         </div>
       )}
