@@ -6,8 +6,8 @@ export default function Footer({
   onPrivacyClick: () => void;
 }) {
   return (
-    <footer class="w-full bg-black flex justify-center">
-      <div class="flex justify-center gap-2 text-sm text-white">
+    <footer class="w-full bg-black flex justify-center p-5">
+      <div class="flex justify-center gap-2 text-sm text-white items-center-safe">
         <p>© 2025 www.beatazych.pl</p>
         <button
           onClick={onPrivacyClick}

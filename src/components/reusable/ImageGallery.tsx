@@ -84,7 +84,7 @@ export default function ImageGallery(props: ImageGalleryProps) {
               alt="Powiększony obraz"
               onClick={(e) => e.stopPropagation()}
               class={`max-w-[90vw] max-h-[90vh] rounded-xl shadow-2xl object-contain transition-transform duration-500 ${
-                isVisible ? "scale-100" : "scale-125"
+                isVisible ? "scale-100" : "scale-0"
               }`}
             />
           </div>
