@@ -38,6 +38,7 @@ export default function CookieConsent() {
     localStorage.removeItem("ga_consent");
     setConsent(null);
     closeModal();
+    setTimeout(() => window.location.reload(), 300);
   };
 
   const openModal = () => {
