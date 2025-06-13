@@ -79,9 +79,9 @@ export default function CookieConsent() {
     <>
       <button
         onClick={openModal}
-        class="fixed bottom-6 left-6 bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300 hover:cursor-pointer z-50 flex items-center gap-2 group transition-all duration-500"
+        class="fixed bottom-5 left-5 rounded-full hover:brightness-110 hover:cursor-pointer z-50 flex items-center gap-2 group"
       >
-        <span class="text-xl">🍪</span>
+        <span class="text-3xl">🍪</span>
         <span class="overflow-hidden whitespace-nowrap max-w-0 group-hover:max-w-[200px] transition-all duration-300 text-sm">
           Ustawienia cookies
         </span>

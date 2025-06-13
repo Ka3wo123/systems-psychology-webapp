@@ -59,9 +59,9 @@ export function App() {
         <div class="flex flex-col space-y-16">
           <BioSection />
 
-          <EducationSection />
+          {/* <EducationSection /> */}
 
-          <CertificatesSection />
+          {/* <CertificatesSection /> */}
 
           <PayListSection />
 
