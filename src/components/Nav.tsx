@@ -34,7 +34,7 @@ export default function Nav() {
             : "opacity-0 scale-95 pointer-events-none"
         }`}
       >
-        <ul class="flex flex-col p-4 text-center font-medium">
+        <ul class="flex flex-col p-1 text-center font-medium">
           {LINKS.map((l) => (
             <li key={l.href}>
               <a
@@ -44,7 +44,6 @@ export default function Nav() {
               >
                 {l.label}
               </a>
-              <hr />
             </li>
           ))}
         </ul>

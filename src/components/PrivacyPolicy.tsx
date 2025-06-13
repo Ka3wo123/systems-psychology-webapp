@@ -5,6 +5,7 @@ export default function PrivacyPolicyModal({
 }: {
   onClose: () => void;
 }) {
+  const email = import.meta.env.VITE_EMAIL;
   return (
     <div class="fixed inset-0 m-1 bg-opacity-50 flex items-center justify-center z-50">
       <div class="bg-white p-6 rounded-xl max-w-3xl w-full shadow-lg relative overflow-y-auto max-h-[90vh] text-gray-800 text-sm leading-relaxed">
@@ -38,9 +39,9 @@ export default function PrivacyPolicyModal({
             Właścicielem Strony i administratorem danych (w zakresie Google
             Analytics, jeśli wyrażono zgodę) jest:
             <br />
-            <strong>Beata Zych</strong>
+            <strong>mgr Beata Zych - terapeutka systemowa</strong>
             <br />
-            <strong>beata.zych@yahoo.com</strong>
+            <strong>{email}</strong>
           </p>
 
           <p>
@@ -97,6 +98,15 @@ export default function PrivacyPolicyModal({
               target="_blank"
             >
               support.google.com/analytics/answer/6004245
+            </a>
+            <br />
+            Polityka prywatności Google Analytics:{" "}
+            <a
+              class="text-blue-600 underline"
+              href="https://policies.google.com/privacy?hl=pl"
+              target="_blank"
+            >
+              https://policies.google.com/privacy?hl=pl
             </a>
           </p>
 

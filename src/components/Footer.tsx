@@ -7,11 +7,11 @@ export default function Footer({
 }) {
   return (
     <footer class="w-full bg-black flex justify-center p-5">
-      <div class="flex justify-center gap-2 text-sm text-white items-center-safe">
+      <div class="flex flex-col justify-center gap-5 text-sm text-white items-center-safe lg:flex-row">
         <p>© 2025 www.beatazych.pl</p>
         <button
           onClick={onPrivacyClick}
-          class="flex gap-1 items-center hover:text-gray-200 hover:cursor-pointer"
+          class="flex items-center hover:text-gray-200 hover:cursor-pointer"
         >
           <FileText />
           Polityka prywatności

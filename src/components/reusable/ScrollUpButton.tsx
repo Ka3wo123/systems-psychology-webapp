@@ -18,10 +18,10 @@ export default function ScrollUpButton() {
   };
 
   return (
-    <div class="fixed bottom-6 right-6 z-50">
+    <div class="fixed bottom-6 right-0 z-50">
       <button
         onClick={scrollToTop}
-        class={`p-3 rounded-full bg-gray-400 text-white shadow-lg transition-opacity duration-300 hover:bg-gray-500 hover:cursor-pointer ${
+        class={`p-3 rounded-l-2xl bg-gray-400 text-white shadow-lg transition-opacity duration-300 hover:bg-gray-500 hover:cursor-pointer ${
           visible ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         aria-label="Scroll to top"
