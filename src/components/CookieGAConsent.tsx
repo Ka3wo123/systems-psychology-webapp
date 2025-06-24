@@ -82,7 +82,7 @@ export default function CookieConsent() {
         class="fixed bottom-5 left-5 rounded-full hover:brightness-110 hover:cursor-pointer z-50 flex items-center gap-2 group"
       >
         <span class="text-3xl">🍪</span>
-        <span class="overflow-hidden whitespace-nowrap max-w-0 group-hover:max-w-[200px] transition-all duration-300 text-sm">
+        <span class="overflow-hidden text-white whitespace-nowrap max-w-0 group-hover:max-w-[200px] transition-all duration-300 text-sm">
           Ustawienia cookies
         </span>
       </button>

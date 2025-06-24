@@ -11,7 +11,7 @@ Przesyłane są dane odnośnie:
 
 Możesz cofnąć zgodę w każdej chwili.`;
 export const COOKIES_CONSENT_REJECTION = `Nie wyraziłeś zgody na analityczne cookies (Google Analytics). Możesz wyrazić zgodę, jeśli chcesz, aby strona dostarczała informacje o metrykach.`;
-export const ANALYTICS_COOKIES_DESCRIPRION = `Analityczne cookies dostarczają mi informacje o metrykach liczby
+export const ANALYTICS_COOKIES_DESCRIPRION = `Analityczne cookies dostarczają mi informacji o metrykach liczby
               odwiedzających, współczynniku odrzuceń, źródle ruchu itp.`;
 export const REJECT_CONSENT = "Odrzuć zgodę";
 export const ACCEPT_CONSENT = "Wyraź zgodę";

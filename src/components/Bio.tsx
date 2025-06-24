@@ -21,9 +21,8 @@ export default function BioSection() {
             <p
               key={idx}
               class="text-sm mb-4 text-gray-700 sm:text-lg md:text-xl whitespace-pre-line text-left"
-            >
-              {fixOrphans(paragraph.trim())}
-            </p>
+              dangerouslySetInnerHTML={{ __html: fixOrphans(paragraph.trim()) }}
+            />
           ))}
       </div>
     </section>

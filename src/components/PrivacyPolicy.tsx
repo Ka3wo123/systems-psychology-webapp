@@ -1,4 +1,4 @@
-import { X } from "lucide-preact";
+import { FileText, X } from "lucide-preact";
 
 export default function PrivacyPolicyModal({
   onClose,
@@ -7,18 +7,21 @@ export default function PrivacyPolicyModal({
 }) {
   const email = import.meta.env.VITE_EMAIL;
   return (
-    <div class="fixed inset-0 m-1 bg-opacity-50 flex items-center justify-center z-50">
+    <div class="fixed inset-0 bg-opacity-50 flex items-center justify-center z-50">
       <div class="bg-white p-6 rounded-xl max-w-3xl w-full shadow-lg relative overflow-y-auto max-h-[90vh] text-gray-800 text-sm leading-relaxed">
-        <button
-          class="absolute top-3 right-3 text-gray-500 hover:text-black"
-          onClick={onClose}
-          aria-label="Zamknij"
-        >
-          <X size={25} class="hover:text-red-600 hover:cursor-pointer" />
-        </button>
-        <h2 class="text-xl font-bold mb-4 text-center">
-          📄 Polityka prywatności
-        </h2>
+        <div class="sticky top-0 bg-white z-50 flex justify-between items-center p-4 mb-4 border-dashed border-black">
+          <div class="flex items-center gap-2">
+            <FileText size={28} class="text-black" />
+            <h2 class="text-xl font-bold">Polityka prywatności</h2>
+          </div>
+          <button
+            class="text-gray-500 hover:text-black"
+            onClick={onClose}
+            aria-label="Zamknij"
+          >
+            <X size={25} class="hover:text-red-600 hover:cursor-pointer" />
+          </button>
+        </div>
 
         <section class="space-y-4">
           <p>
