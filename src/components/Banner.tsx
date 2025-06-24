@@ -1,5 +1,5 @@
 import { WORKER_NAME, SYSTEM_PSYCHOLOGY } from "@/constants/bio";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 
 export default function Banner() {
   return (
