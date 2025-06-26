@@ -4,7 +4,7 @@ Jeśli doświadczasz trudności w relacjach – z partnerem, dzieckiem, rodzicam
 
 🌿 <strong>Terapia rodzin i par</strong>, którą prowadzę, opiera się na podejściu systemowym. Patrzymy na człowieka nie tylko jako jednostkę, ale jako część większej całości – <strong>rodziny, związku, relacji społecznych</strong>.
 
-👩‍⚕️ Jestem <strong>magistrem terapii systemowej</strong> z wykształceniem podyplomowym w tej dziedzinie. W mojej pracy terapeutycznej łączę <strong>empatię, zrozumienie i doświadczenie</strong> – by pomóc Ci spojrzeć szerzej na Twoją sytuację życiową.
+👩‍⚕️ Jestem <strong>terapeutką systemową</strong> z wykształceniem podyplomowym w tej dziedzinie. W mojej pracy łączę <strong>empatię, zrozumienie i doświadczenie</strong> – by pomóc Ci spojrzeć szerzej na Twoją sytuację życiową.
 
 Zapraszam na spotkanie, jeśli:
 
@@ -18,5 +18,5 @@ Zapraszam na spotkanie, jeśli:
 <strong>Terapia systemowa</strong> to często pierwszy krok do zmiany, lepszego zrozumienia siebie oraz budowania zdrowszych relacji.
 `;
 
-export const SYSTEM_PSYCHOLOGY = "Psychologia systemowa";
+export const SYSTEM_PSYCHOLOGY = "Terapia systemowa";
 export const WORKER_NAME = "mgr Beata Zych";

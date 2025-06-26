@@ -1,4 +1,5 @@
 import type { ServiceCard } from "@/constants/services";
+import { Clock } from "lucide-preact";
 
 export default function ServiceCard(props: ServiceCard) {
   return (
@@ -14,10 +15,10 @@ export default function ServiceCard(props: ServiceCard) {
         </span>
         <hr class="flex-grow border-gray-500" />
       </div>
-
-      <p class="text-lg lg:text-2xl text-gray-700 break-words whitespace-pre-line">
-        {props.description}
-      </p>
+      <div class="text-black lg:text-lg text-sm flex gap-2 items-center justify-center">
+        <Clock />
+        {props.duration}
+      </div>
     </div>
   );
 }

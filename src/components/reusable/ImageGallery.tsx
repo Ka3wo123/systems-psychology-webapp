@@ -55,7 +55,7 @@ export default function ImageGallery(props: ImageGalleryProps) {
               <img
                 src={img}
                 alt={`Obraz ${index + 1}`}
-                class="w-full max-w-[100%] h-auto rounded-lg cursor-pointer transition duration-300 transform hover:brightness-110"
+                class="w-100 max-w-[100%] h-auto rounded-lg cursor-pointer transition duration-300 transform hover:brightness-110"
                 onClick={() => setSelectedImage(img)}
               />
             </li>
