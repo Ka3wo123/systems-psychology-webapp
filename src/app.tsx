@@ -12,6 +12,7 @@ import ScrollUpButton from "./components/reusable/ScrollUpButton";
 import ReactGA from "react-ga4";
 import CookieConsent from "./components/CookieGAConsent";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import EducationSection from "./components/Education";
 
 export function App() {
   const GA_CODE = import.meta.env.VITE_GA_CODE;
@@ -57,9 +58,7 @@ export function App() {
         <div class="flex flex-col space-y-16">
           <BioSection />
 
-          {/* <EducationSection /> */}
-
-          {/* <CertificatesSection /> */}
+          <EducationSection />
 
           <PayListSection />
 

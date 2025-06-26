@@ -15,6 +15,7 @@ export default function PayListSection() {
               name={s.name}
               price={s.price}
               description={s.description}
+              duration={s.duration}
             />
           );
 
